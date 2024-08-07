@@ -1,0 +1,43 @@
+.page-container-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 15px 0px rgba(89, 153, 104, 0.897);
+  width: 80%;
+  max-width: 1200px;
+  margin: auto; /* Centraliza o container horizontalmente */
+  text-align: center; /* Centraliza o texto dentro do container */
+}
+
+.contact-item {
+  margin-bottom: 10px; /* Adicionando espaçamento entre os itens de contato */
+}
+h1{
+  color: #b3ce39;
+}
+.contact-item{
+  color: #b3ce39;
+  font-size: 20px;
+  margin-top: 20px;
+  text-align: center; /* Centraliza o texto */
+}
+
+.contact-item a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+

@@ -1,0 +1,137 @@
+/* Estilos para o modal */
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; 
+  margin-top: 40px; 
+  height: 100vh;
+}
+
+.project-card-container {
+  width: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0px 10px 15px -5px rgba(89, 153, 104, 0.897); /* Sombra padrão para o modo claro */
+  transition: 0.3s;
+  animation: ease-in;
+  margin-top: 100px;
+  margin-left: 20px;
+  margin-right: 30px; 
+}
+
+.project-card-container:hover {
+  transform: scale(1.2);
+}
+
+.image-container img {
+  overflow: hidden;
+  height: 200px;
+}
+
+.stacks-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 10px; 
+}
+
+.stacks-container img {
+  width: 25px; 
+  height: 25px; 
+  margin-right: 10px; 
+  margin-bottom: 10px; 
+  border-radius: 5px; 
+  
+}
+
+.card-content {
+  margin: 1rem;
+  margin-top: 0.5rem;
+}
+
+h2 {
+   color: #b3ce39;
+}
+
+ p {
+  /* color: #FFF; */
+  margin: 0;
+  padding: 0;
+}
+
+/* .card-title {
+  margin-bottom: 0.5rem;
+} */
+.btn-container {
+  display: flex;
+  
+}
+
+.btn {
+  margin-top: 10px;
+  margin:10px 5px 20px 10px;
+  border-radius: 5px;
+  border: none;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+}
+
+.btn a {
+  padding: 0.5rem;
+  background-color: #599968;
+  border: 2px solid #2f5e69;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #FFF;
+  transition: 0.2s;
+}
+
+.btn a:hover {
+  background: #82b7c1;
+  transform: scale(1.1);
+}
+
+
+.btn-ver-mais {
+  margin-top: 10px;
+  margin-left: 10px;
+  padding: 0.2rem 1rem; /* Adicione preenchimento nos lados */
+  background-color: #599968;
+  border-radius: 5px;
+  border: 2px solid #2f5e69; /* Adicione a borda */
+  color: #FFF;
+  width: 120px; /* Defina a largura desejada */
+  height: 35px; /* Defina a altura desejada */
+}
+
+.btn-ver-mais:hover {
+  background: #82b7c1;
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  #titulo_projeto {
+    margin: 10px 0; /* Reduz a margem superior e inferior, mantém a margem nas laterais */
+    padding: 10px; /* Adiciona preenchimento interno */
+    height: auto; /* Redefine a altura para automática */
+    font-size: 1.5em; /* Redefine o tamanho da fonte */
+  }
+  
+  p {
+    margin: 10px 0; /* Reduz a margem superior e inferior, mantém a margem nas laterais */
+    padding: 10px; /* Adiciona preenchimento interno */
+    height: auto; /* Redefine a altura para automática */
+    font-size: 1em; /* Redefine o tamanho da fonte */
+  }
+  
+  .stacks-container img {
+    width: 40px; /* Reduz o tamanho das imagens de stack para 40px */
+    height: 40px; 
+  }
+
+  .btn a, .btn-ver-mais {
+    padding: 0.3rem; /* Reduz o preenchimento dos botões */
+  }
+}

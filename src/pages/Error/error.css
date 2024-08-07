@@ -1,0 +1,23 @@
+/* error.css */
+.error-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alinha horizontalmente ao centro */
+    justify-content: center; /* Alinha verticalmente ao centro */
+    height: 100vh; /* Ocupa toda a altura da tela */
+    text-align: center; /* Alinha o texto ao centro */
+  }
+  .p_error_page{
+    color: black;
+  }
+  
+  .error-link {
+    margin-top: 20px; /* Espaçamento acima do link */
+    color: #007bff; /* Cor do link */
+    text-decoration: none; /* Remove o sublinhado do link */
+  }
+  
+  .error-link:hover {
+    text-decoration: underline; /* Sublinhado do link ao passar o mouse */
+  }
+  

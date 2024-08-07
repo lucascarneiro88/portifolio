@@ -1,0 +1,339 @@
+/* Estilos base */
+.home-container {
+  position: relative; /* Posição relativa para posicionamento dos elementos filhos */
+  border: 5px solid #599968; /* Borda sólida verde ao redor do container */
+  padding: 20px; /* Espaçamento interno de 20px */
+  width: calc(
+    100vw - 40px
+  ); /* Largura do container ajustada para ocupar 100% da largura visível menos 40px */
+  height: calc(
+    100vh - 40px
+  ); /* Altura do container ajustada para ocupar 100% da altura visível menos 40px */
+  box-sizing: border-box; /* Calcula a largura e altura incluindo o padding e a borda */
+  margin: 20px 10px; /* Margem externa de 20px no topo e base, 10px nos lados */
+  overflow: hidden; /* Oculta o conteúdo que transborda */
+}
+
+/* Estilos da imagem de fundo */
+.home-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)),
+    url("/img/img-home/background-home.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  filter: blur(5px);
+  z-index: -1;
+}
+
+.meu-logo {
+  display: inline-block; /* Exibe o logotipo como bloco inline */
+  margin: -50px 10px 20px; /* Margem superior -50px, 10px nos lados, 20px na base */
+}
+
+.meu-logo img {
+  width: 200px; /* Largura fixa para a imagem do logotipo */
+  height: auto; /* Altura automática proporcional */
+}
+
+/* Estilos de navegação */
+.links-home {
+  position: absolute; /* Posição absoluta para a lista de links */
+  top: 20px; /* Distância do topo */
+  right: 100px; /* Distância da direita */
+  margin: 10px; /* Margem interna */
+  padding: 20px; /* Preenchimento interno */
+  display: flex; /* Exibe os itens como flexíveis */
+}
+
+.links-home li {
+  display: inline; /* Exibe os itens da lista inline */
+  margin-left: 60px; /* Margem à esquerda entre os itens */
+}
+
+.links-home li a {
+  color: #fff; /* Cor do texto branca */
+  font-size: 26px; /* Tamanho da fonte */
+  text-decoration: none; /* Sem decoração de texto */
+}
+
+.links-home li a:hover {
+  color: #599968; /* Cor do texto ao passar o mouse */
+}
+
+/* Estilos do menu hambúrguer */
+.hamburger-menu-home {
+  position: absolute; /* Adiciona posição absoluta */
+  top: 20px; /* Alinha ao topo */
+  right: 20px; /* Alinha à direita */
+  display: none; /* Inicialmente oculto em telas maiores */
+  flex-direction: column; /* Define a direção dos itens flexíveis como coluna */
+  cursor: pointer; /* Define o cursor como um ponteiro, indicando que o elemento é clicável */
+  z-index: 10; /* Define a camada de empilhamento, garantindo que o menu hambúrguer fique acima de outros elementos */
+}
+
+.hamburger-menu-home .bar {
+  width: 25px; /* Largura da barra */
+  height: 3px; /* Altura da barra */
+  background-color: #fff; /* Cor de fundo das barras */
+  margin: 4px 0; /* Espaçamento entre as barras */
+  transition: 0.4s; /* Transição suave */
+}
+
+/* Outros estilos para nome, stack, logos, etc. */
+.nome {
+  display: flex; /* Exibe o nome centralizado vertical e horizontalmente */
+  justify-content: center; /* Centraliza na horizontal */
+  align-items: center; /* Centraliza na vertical */
+  color: #fff; /* Cor do texto branca */
+  margin-top: 100px; /* Margem superior */
+  margin-bottom: 0; /* Margem inferior zero */
+}
+
+.stack {
+  font-size: 32px; /* Tamanho da fonte */
+  color: #599968; /* Cor verde */
+  text-align: center; /* Alinhamento central */
+  margin-top: 10px; /* Margem superior */
+}
+
+.about {
+  display: flex; /* Exibe o componente about centralizado vertical e horizontalmente */
+  justify-content: center; /* Centraliza na horizontal */
+  align-items: center; /* Centraliza na vertical */
+  font-size: 25px; /* Tamanho da fonte */
+  margin-top: 100px; /* Margem superior */
+}
+
+.about p {
+  text-indent: 1em; /* Recuo do parágrafo */
+  color: #fff; /* Cor do texto branca */
+}
+
+.about span {
+  
+  color: #599968; /* Cor verde */
+  text-shadow: 3px 1px 0px rgb(58, 59, 59); /* Sombra do texto */
+}
+
+/* Estilos dos logos de mídias sociais */
+.linkedin-logo {
+  position: absolute; /* Posição absoluta */
+  bottom: 22px; /* Distância da base */
+  left: 20px; /* Distância da esquerda */
+}
+
+.linkedin-logo img {
+  filter: invert(100%); /* Inverte as cores da imagem */
+  width: 100px; /* Largura fixa */
+}
+
+.github-logo {
+  position: absolute; /* Posição absoluta */
+  bottom: 28px; /* Distância da base */
+  left: 80px; /* Distância da esquerda */
+}
+
+.github-logo img {
+  filter: invert(100%); /* Inverte as cores da imagem */
+  width: 80px; /* Largura fixa */
+}
+
+.github-logo img:hover,
+.linkedin-logo img:hover {
+  transform: scale(1.5); /* Efeito de escala ao passar o mouse */
+}
+
+/* Estilos dos logos */
+.logo-csharp {
+  position: absolute; /* Posição absoluta */
+  bottom: 46px; /* Distância da base */
+  right: 100px; /* Distância da direita */
+}
+
+.logo-csharp img {
+  filter: invert(100%); /* Inverte as cores da imagem */
+  width: 60px; /* Largura fixa */
+}
+
+.logo-react {
+  position: absolute; /* Posição absoluta */
+  bottom: 50px; /* Distância da base */
+  right: 180px; /* Distância da direita */
+}
+
+.logo-react img {
+  width: 55px; /* Largura fixa */
+}
+
+.logo-js {
+  position: absolute; /* Posição absoluta */
+  bottom: 50px; /* Distância da base */
+  right: 250px; /* Distância da direita */
+}
+
+.logo-js img {
+  width: 50px; /* Largura fixa */
+}
+
+/* Estilos responsivos */
+@media (max-width: 750px) {
+  .hamburger-menu-home {
+    display: flex; /* Exibe o menu hambúrguer em telas menores */
+  }
+
+  .links-home {
+    display: none; /* Oculta a lista de links por padrão */
+    flex-direction: column; /* Itens dispostos em coluna */
+    position: absolute; /* Posição absoluta */
+    top: 60px; /* Distância do topo */
+    right: 10px; /* Distância da direita */
+    background: rgba(0, 0, 0, 0.8); /* Fundo com transparência */
+    padding: 20px; /* Preenchimento interno */
+    z-index: 5; /* Z-index mais alto */
+  }
+
+  .links-home.open {
+    display: flex; /* Exibe a lista de links ao abrir o menu */
+  }
+
+  .links-home li {
+    margin: 0; /* Remove a margem dos itens */
+    text-align: center; /* Alinha o texto ao centro */
+    padding: 1rem; /* Preenchimento interno */
+  }
+
+  .links-home li a {
+    width: 100%; /* Largura total */
+    padding: 1rem 0; /* Preenchimento vertical */
+    display: block; /* Exibe como bloco */
+  }
+
+  .nome {
+    margin-top: 0; /* Margem superior zero */
+  }
+  .about {
+    font-size: 18px; /* Tamanho da fonte reduzido */
+    margin-top: -10px; /* Margem negativa para ajuste */
+  }
+
+  .logo-js {
+    bottom: 50px; /* Distância da base */
+    right: 120px; /* Distância da direita */
+  }
+
+  .logo-react {
+    bottom: 50px; /* Distância da base */
+    right: 180px; /* Distância da direita */
+  }
+
+  .logo-csharp {
+    bottom: 50px; /* Distância da base */
+    right: 240px; /* Distância da direita */
+  }
+
+  .logo-js img,
+  .logo-react img,
+  .logo-csharp img {
+    width: 38px; /* Largura fixa reduzida */
+  }
+
+
+  .github-logo,
+  .linkedin-logo {
+    position: relative; /* Posição relativa */
+    bottom: auto; /* Reinicia a posição inferior */
+    left: auto; /* Reinicia a posição esquerda */
+    display: flex; /* Exibe os logos como flexíveis */
+    justify-content: center; /* Centraliza na horizontal */
+    align-items: center; /* Centraliza na vertical */
+    margin: 10px 0; /* Margem superior e inferior */
+  }
+
+  .github-logo img,
+  .linkedin-logo img {
+    width: 60px; /* Largura fixa */
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .links-home {
+    display: none; /* Oculta a lista de links por padrão */
+    top: 50px; /* Distância do topo */
+    right: 0; /* Distância da direita */
+    left: 0; /* Distância da esquerda */
+    width: 100%; /* Largura total */
+    flex-direction: column; /* Itens dispostos em coluna */
+    align-items: center; /* Centraliza na horizontal */
+  }
+
+  .links-home.open {
+    margin-top: 180px; /* Margem superior ao abrir o menu */
+    display: flex; /* Exibe a lista de links ao abrir o menu */
+  }
+
+  .stack {
+    font-size: 20px; /* Tamanho da fonte reduzido */
+    text-align: center; /* Alinhamento central */
+    margin-top: 0px; /* Margem superior zero */
+  }
+
+
+ 
+
+}
+
+@media screen and (max-width: 340px) {
+  .links-home {
+    display: none; /* Oculta a lista de links por padrão */
+  }
+
+  .links-home.open {
+    display: flex; /* Exibe a lista de links ao abrir o menu */
+  }
+
+  .nome {
+    margin-top: 0; /* Margem superior zero */
+    font-size: 12px; /* Tamanho da fonte reduzido */
+  }
+
+  .stack {
+    font-size: 12px; /* Tamanho da fonte reduzido */
+    margin-top: 0px; /* Margem superior zero */
+  }
+
+  .linkedin-logo,
+  .github-logo {
+    bottom: 15px; /* Distância da base */
+  }
+
+  .logo-react,
+  .logo-csharp {
+    right: 200px; /* Distância da direita */
+  }
+  .logo-js {
+    bottom: 10px; /* Distância da base */
+    right: 100px;
+  }
+
+  .logo-react {
+    bottom: 10px; /* Distância da base */
+    right: 60px; /* Distância da direita */
+  }
+
+  .logo-csharp {
+    bottom: 10px; /* Distância da base */
+    right: 30px; /* Distância da direita */
+  }
+
+  .logo-js img,
+  .logo-react img,
+  .logo-csharp img {
+    width: 25px; /* tamanho imagem */
+  }
+}

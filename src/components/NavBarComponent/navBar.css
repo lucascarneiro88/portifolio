@@ -1,0 +1,124 @@
+.navbar {
+  background-color: #413e3c; /* Cor de fundo para o tema claro */
+  color: #fff; /* Cor do texto */
+  display: flex;
+  padding: 20px; /* Espaçamento interno */
+  position: fixed; /* Barra de navegação fixada no topo */
+  top: 0;
+  left: 0;
+  width: 100%; /* Largura total */
+  z-index: 1000; /* Camada z para sobreposição */
+  justify-content: space-between; /* Espaço entre os elementos */
+}
+
+/* Estilo para o tema dark */
+body.dark-mode .navbar {
+  background: transparent; /* Fundo transparente para o tema dark */
+}
+
+.navbar-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between; /* Espaço entre os elementos */
+}
+
+.page-title {
+  margin-left: 20px; /* Margem à esquerda */
+  font-size: 24px; /* Tamanho da fonte */
+  color: #599968; /* Cor do título */
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+}
+
+.hamburger-menu {
+  display: none; /* Oculta por padrão em telas maiores */
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 24px; /* Altura do ícone do menu */
+  width: 30px; /* Largura do ícone do menu */
+}
+
+.hamburger-menu .bar {
+  background-color: white; /* Cor das barras do menu */
+  height: 3px; /* Altura das barras */
+  width: 100%; /* Largura das barras */
+  transition: all 0.3s; /* Transição suave */
+}
+
+/* Animação das barras do menu quando aberto */
+.hamburger-menu .bar.open:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-menu .bar.open:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-menu .bar.open:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.links-nav {
+  list-style: none; /* Remove os estilos padrão de lista */
+  padding: 0;
+  display: flex; /* Exibe os links em linha */
+  margin-left: auto; /* Adiciona margem automática à esquerda, empurrando os links para a direita */
+}
+
+.links-nav li {
+  margin-left: 80px; /* Margem entre os itens de lista */
+}
+
+.links-nav li a {
+  color: #599968; /* Cor dos links */
+  text-decoration: none; /* Remove sublinhado padrão */
+  font-size: 22px; /* Tamanho da fonte dos links */
+  background: transparent; /* Fundo transparente */
+}
+
+.links-nav li a:hover {
+  text-decoration: underline; /* Sublinhado ao passar o mouse */
+  color: #fff; /* Cor do texto ao passar o mouse */
+}
+
+/* Media queries para tornar a navegação responsiva */
+@media (max-width: 750px) {
+  .navbar-content {
+    /* flex-direction: column; */
+    align-items: flex-start;
+  }
+
+  .theme-toggle {
+    align-self: center; /* Centraliza o toggle de tema */
+    margin: 10px 0;
+  }
+
+  .hamburger-menu {
+    display: flex; /* Exibe o ícone do menu hamburger */
+    align-self: flex-end; /* Posiciona o menu hamburger à direita */
+  }
+
+  .links-nav {
+    display: none; /* Oculta os links */
+    flex-direction: column; /* Ajusta para coluna */
+    position: absolute; /* Posição absoluta */
+    top: 80px; /* Distância do topo */
+    right: 0; /* Ajusta para a direita */
+    background-color: #413e3c; /* Cor de fundo para o tema claro */
+    padding: 20px; /* Espaçamento interno */
+  }
+
+  .links-nav.open {
+    display: flex; /* Exibe os links ao abrir o menu */
+  }
+
+  .links-nav li {
+    margin-left: 0; /* Remove a margem à esquerda */
+    margin-bottom: 15px; /* Margem inferior entre os itens */
+  }
+}

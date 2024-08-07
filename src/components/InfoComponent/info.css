@@ -1,0 +1,85 @@
+.page-container-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 15px 0px rgba(89, 153, 104, 0.897);
+  width: 80%;
+  max-width: 1200px;
+  margin: auto; /* Centraliza o container horizontalmente */
+  text-align: center; /* Centraliza o texto dentro do container */
+}
+
+.foto-perfil {
+  margin-bottom: -10px; /* Espaço abaixo da foto de perfil */
+}
+
+.foto-perfil img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.text-section {
+  margin-top: 20px;
+}
+
+h2, h3 {
+  color: #59996886;
+  font-size: 20px;
+  margin-top: 20px;
+  text-align: center; /* Centraliza o texto */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: left; /* Ajusta o alinhamento do texto da lista */
+}
+
+ul ul {
+  margin-left: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #599968;
+}
+
+.custom-marker {
+  list-style-type: none; /* Remove os marcadores padrão */
+  padding-left: 0; /* Remove o padding padrão */
+  list-style-type: disc; /* ou qualquer outro estilo de marcador */
+}
+
+.custom-marker li {
+  margin-bottom: 10px; /* Espaçamento entre os itens da lista */
+}
+
+.custom-marker li a {
+  text-decoration: none; /* Remove o sublinhado dos links */
+  color: #007bff; /* Cor do texto dos links */
+  font-weight: bold; /* Torna o texto dos links em negrito */
+  transition: color 0.3s ease; /* Adiciona uma transição suave ao mudar a cor */
+}
+
+.custom-marker li a:hover {
+  text-decoration: underline; /* Sublinha o texto dos links ao passar o mouse */
+}
+
+
+

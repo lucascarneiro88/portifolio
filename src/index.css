@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+   
+}
+
+html,
+body {
+    height: 100vh;
+    font-family: "Roboto", sans-serif;
+    text-rendering: optimizeLegibility;   /* Define a renderização de texto para otimizar a legibilidade.  */
+    -webkit-font-smoothong: antialiased;
+    /* Define o tipo de suavização de fonte antialiasing para os navegadores
+     que usam o motor de renderização WebKit (como o Safari e o Chrome). Isso ajuda a tornar 
+    as bordas das fontes mais suaves e limpas, melhorando a legibilidade do texto. */
+}
+.dark-theme,
+.dark-theme a {
+    background-color: #333;
+    color: #FFF;
+}
+
+

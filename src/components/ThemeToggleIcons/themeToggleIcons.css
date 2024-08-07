@@ -1,0 +1,53 @@
+/* CSS */
+
+/* Oculta a checkbox padrão */
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+/* Estilo da label que substitui a checkbox */
+.label {
+  background-color: #ffffff38; /* Cor de fundo da label */
+  border-radius: 50px; /* Bordas arredondadas */
+  cursor: pointer; /* Transforma o cursor em ponteiro */
+  display: flex; /* Exibe como flexbox */
+  align-items: center; /* Alinha itens ao centro verticalmente */
+  padding: 5px; /* Espaçamento interno */
+  position: relative; /* Posição relativa */
+  height: 26px; /* Altura da label */
+  width: 55px; /* Largura da label (ajuste para ícones e bola) */
+}
+
+/* Estilos dos ícones de sol e lua */
+.sol,
+.lua {
+  width: 24px; /* Largura dos ícones */
+  height: 24px; /* Altura dos ícones */
+  /* object-fit: contain; */ /* Comentado: estilo de ajuste de imagem */
+}
+
+.sol {
+  margin-right: 5px; /* Espaço entre os ícones (à direita do ícone sol) */
+}
+
+/* Estilo da bola que representa o estado do toggle */
+.ball {
+  position: absolute; /* Posição absoluta */
+  top: 2px; /* Distância do topo */
+  height: 22px; /* Altura da bola */
+  width: 22px; /* Largura da bola */
+  border-radius: 50%; /* Borda circular */
+  background-color: #413737; /* Cor de fundo da bola */
+  transition: transform 0.2s linear; /* Transição suave ao mover */
+}
+
+/* Estilo da bola quando a checkbox está marcada */
+.checkbox:checked + .label .ball {
+  transform: translateX(30px); /* Move a bola para a direita */
+}
+
+/* Estilo da bola quando a checkbox está marcada e o tema é light */
+.checkbox:checked + .theme-light .label .ball {
+  transform: translateX(-30px); /* Move a bola para a esquerda */
+}
