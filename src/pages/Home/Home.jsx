@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import "./home.css"; 
-import About from "../../components/AboutComponent/About";
+import About from '../../components/AboutComponent/About';
 
 function Home() {
   // Estado para controlar o texto animado
