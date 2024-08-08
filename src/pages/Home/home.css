@@ -103,22 +103,23 @@
 }
 
 .about {
-  display: flex; /* Exibe o componente about centralizado vertical e horizontalmente */
-  justify-content: center; /* Centraliza na horizontal */
-  align-items: center; /* Centraliza na vertical */
-  font-size: 25px; /* Tamanho da fonte */
-  margin-top: 100px; /* Margem superior */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  color: #fff;
 }
 
-.about p {
-  text-indent: 1em; /* Recuo do parágrafo */
-  color: #fff; /* Cor do texto branca */
+.about-paragraph {
+  max-width: 800px; /* Define uma largura máxima para o parágrafo */
+  text-align: justify; /* Justifica o texto para uma melhor leitura */
+  line-height: 1.6; /* Ajusta o espaçamento entre linhas para melhor legibilidade */
+  margin: 0 auto; /* Centraliza o parágrafo */
 }
 
 .about span {
-  
-  color: #599968; /* Cor verde */
-  text-shadow: 3px 1px 0px rgb(58, 59, 59); /* Sombra do texto */
+  color: #599968;
+  text-shadow: 3px 1px 0px rgb(58, 59, 59);
 }
 
 /* Estilos dos logos de mídias sociais */
@@ -180,7 +181,6 @@
 .logo-js img {
   width: 50px; /* Largura fixa */
 }
-
 /* Estilos responsivos */
 @media (max-width: 750px) {
   .hamburger-menu-home {
@@ -216,10 +216,13 @@
 
   .nome {
     margin-top: 0; /* Margem superior zero */
+    font-size: 20px; /* Ajusta o tamanho da fonte */
   }
+
   .about {
     font-size: 18px; /* Tamanho da fonte reduzido */
-    margin-top: -10px; /* Margem negativa para ajuste */
+    margin-top: 20px; /* Ajusta a margem superior */
+    padding: 0 10px; /* Adiciona espaçamento interno para ajuste em telas pequenas */
   }
 
   .logo-js {
@@ -243,7 +246,6 @@
     width: 38px; /* Largura fixa reduzida */
   }
 
-
   .github-logo,
   .linkedin-logo {
     position: relative; /* Posição relativa */
@@ -261,7 +263,7 @@
   }
 }
 
-@media screen and (max-width: 500px) {
+@media (max-width: 500px) {
   .links-home {
     display: none; /* Oculta a lista de links por padrão */
     top: 50px; /* Distância do topo */
@@ -278,62 +280,135 @@
   }
 
   .stack {
-    font-size: 20px; /* Tamanho da fonte reduzido */
+    font-size: 18px; /* Tamanho da fonte reduzido */
     text-align: center; /* Alinhamento central */
     margin-top: 0px; /* Margem superior zero */
   }
-
-
- 
-
 }
 
-@media screen and (max-width: 340px) {
+@media (max-width: 468px) {
+  .links-home {
+    display: none; /* Oculta a lista de links por padrão */
+    top: 50px; /* Distância do topo */
+    right: 0; /* Distância da direita */
+    left: 0; /* Distância da esquerda */
+    width: 100%; /* Largura total */
+    flex-direction: column; /* Itens dispostos em coluna */
+    align-items: center; /* Centraliza na horizontal */
+  }
+
+  .links-home.open {
+    margin-top: 150px; /* Ajusta a margem superior ao abrir o menu */
+    display: flex; /* Exibe a lista de links ao abrir o menu */
+  }
+
+  .nome {
+    margin-top: 0;
+    font-size: 14px; /* Tamanho da fonte reduzido para telas pequenas */
+  }
+
+  .stack {
+    font-size: 14px; /* Tamanho da fonte reduzido para telas pequenas */
+    margin-top: 0;
+  }
+
+  .linkedin-logo,
+  .github-logo {
+    bottom: 10px; /* Ajusta a distância da base para telas pequenas */
+    left: 10px; /* Ajusta a distância da esquerda para telas pequenas */
+    width: 40px; /* Reduz a largura dos logos */
+  }
+
+  .logo-react,
+  .logo-csharp,
+  .logo-js {
+    bottom: 10px; /* Ajusta a distância da base */
+    right: 10px; /* Ajusta a distância da direita */
+    width: 25px; /* Reduz a largura dos logos */
+  }
+
+  .logo-react {
+    right: 50px; /* Ajusta a posição direita específica */
+  }
+
+  .logo-csharp {
+    right: 90px; /* Ajusta a posição direita específica */
+  }
+
+  .logo-js {
+    right: 130px; /* Ajusta a posição direita específica */
+  }
+
+  .logo-js img,
+  .logo-react img,
+  .logo-csharp img {
+    width: 20px; /* Reduz o tamanho das imagens dos logos */
+  }
+
+  .about {
+    font-size: 14px; /* Ajusta o tamanho da fonte do About */
+    margin-top: 20px; /* Ajusta a margem superior */
+    padding: 0 5px; /* Adiciona espaçamento interno para ajuste em telas pequenas */
+  }
+}
+
+@media (max-width: 340px) {
   .links-home {
     display: none; /* Oculta a lista de links por padrão */
   }
 
   .links-home.open {
     display: flex; /* Exibe a lista de links ao abrir o menu */
+    flex-direction: column; /* Organiza os links em coluna */
+    align-items: center; /* Centraliza os links horizontalmente */
   }
 
   .nome {
-    margin-top: 0; /* Margem superior zero */
-    font-size: 12px; /* Tamanho da fonte reduzido */
+    margin-top: 0;
+    font-size: 12px; /* Tamanho da fonte reduzido para telas muito pequenas */
   }
 
   .stack {
-    font-size: 12px; /* Tamanho da fonte reduzido */
-    margin-top: 0px; /* Margem superior zero */
+    font-size: 12px; /* Tamanho da fonte reduzido para telas muito pequenas */
+    margin-top: 0;
   }
 
   .linkedin-logo,
   .github-logo {
-    bottom: 15px; /* Distância da base */
+    bottom: 10px; /* Ajusta a distância da base para telas pequenas */
+    left: 10px; /* Ajusta a distância da esquerda para telas pequenas */
+    width: 30px; /* Reduz a largura dos logos */
   }
 
   .logo-react,
-  .logo-csharp {
-    right: 200px; /* Distância da direita */
-  }
+  .logo-csharp,
   .logo-js {
-    bottom: 10px; /* Distância da base */
-    right: 100px;
+    bottom: 10px; /* Ajusta a distância da base */
+    right: 10px; /* Ajusta a distância da direita */
+    width: 20px; /* Reduz a largura dos logos */
   }
 
   .logo-react {
-    bottom: 10px; /* Distância da base */
-    right: 60px; /* Distância da direita */
+    right: 50px; /* Ajusta a posição direita específica */
   }
 
   .logo-csharp {
-    bottom: 10px; /* Distância da base */
-    right: 30px; /* Distância da direita */
+    right: 90px; /* Ajusta a posição direita específica */
+  }
+
+  .logo-js {
+    right: 130px; /* Ajusta a posição direita específica */
   }
 
   .logo-js img,
   .logo-react img,
   .logo-csharp img {
-    width: 25px; /* tamanho imagem */
+    width: 15px; /* Reduz o tamanho das imagens dos logos */
+  }
+
+  .about {
+    font-size: 12px; /* Ajusta o tamanho da fonte do About */
+    margin-top: 20px; /* Ajusta a margem superior */
+    padding: 0 5px; /* Adiciona espaçamento interno para ajuste em telas pequenas */
   }
 }
